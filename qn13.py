@@ -1,7 +1,9 @@
-n= int(input("Enter the row size for the pattern: "))
-for i in range(1, n + 1):
-    for j in range(n  - i):
-        print(" ", end=" ")
-    for k in range(1, 2 * i):
-        print("*", end=" ")
-    print()
+try:
+    line = input()
+    n1, n2 = map(int, line.split())
+    for i in range(n2, n1 - 1, -1):
+        for j in range(n1, i + 1):
+            print(j, end=" ")
+        print()
+except ValueError:
+    print("Please enter two integers ")
